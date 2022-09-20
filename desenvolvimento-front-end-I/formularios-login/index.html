@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="global.css">
+    <title>Formulário de Login</title>
+</head>
+<body>
+    <section id="container-content">
+        <header>
+            <img src="./images/logo.png" alt="logo form">
+        </header>
+        <div id="container-form">
+            <div id="container-title">
+                <img src="./images/log-in.svg" alt="Ícone de login">
+                <h1>Faça seu login</h1>
+            </div>
+            <p class="subtitle">Entre com suas informações de cadastro.</p>
+                        
+            <form action="">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu e-mail"  required autofocus>
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" placeholder="Digite sua senha" minlength="8"  required >
+                
+                <div id="container-checkbox">
+                    <div class="col-left">
+                        <input type="checkbox" name="lembrar" id="lembrar" value="yes" >
+                        <label id="label-lembrar" for="lembrar">Lembre-me</label>
+                    </div>
+                    <div class="col-rigth">
+                        <a href="#" class="destaque link">Esqueci minha senha</a>
+                    </div>
+                </div>
+                <input type="submit" value="ENTRAR" id="btn-entrar">
+                <p class="destaque">Não tem uma conta? <a href="#" class="destaque link">Registre-se</a></p>
+            </form>
+        </div>
+    </section>
+    <div id="container-image">
+           <img id="side-image" src="./images/setup-clean.jpg" alt="Setup Clean">
+    </div>
+    
+</body>
+</html>

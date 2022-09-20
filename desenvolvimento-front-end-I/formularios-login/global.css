@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --text-base: #afb6c2;
+  --text-title: #d4ccb6;
+  --background: #191816;
+  --form-background: #3a3936e3;
+  --primary-color: #32adff;
+}
+html {
+  font-size: 62.5%; /* font-size 1em = 10px  */
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--background);
+  color: var(--text-base);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+header {
+  margin-left: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+}
+#container-form {
+  background-color: var(--form-background);
+  width: 70%;
+  height: 70%;
+  margin: 0 auto;
+  border-radius: 2rem;
+}
+form{
+  width: 70%;
+  margin: 0 auto;
+}
+#container-title {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  padding: 3rem 0 1rem 0;
+}
+#container-title h1 {
+  padding-left: 1rem;
+  color: var(--text-title);
+  font-size: 2.4rem;
+}
+.subtitle {
+  width: 70%;
+  margin: 0 auto;
+}
+label {
+  display: block;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+input{
+  outline: none;
+}
+#label-lembrar {
+  display: inline;
+}
+#email, 
+#senha {
+  display: block;
+  padding-left: 3rem;
+  width: 100%;
+  height: 3.5rem;
+  color: var(--text-base);
+  border: 0.1rem solid var(--text-base);
+  border-radius: 0.5rem;
+}
+#email {
+  background: url(./images/mail.svg) no-repeat;
+  background-position: 2% 50%;
+}
+#senha {
+  background: url(./images/lock.svg) no-repeat, url(./images/eye.svg) no-repeat;
+  background-position: 2% 50%, 98% 50%;
+}
+#email:focus {
+  outline-color: var(--primary-color);
+  background: url(./images/mail-focus.svg) no-repeat;
+  background-position: 2% 50%;
+}
+#senha:focus {
+  outline-color: var(--primary-color);
+  background: url(./images/lock-focus.svg) no-repeat;
+  background-position: 2% 50%;
+}
+/* --- Personalização do Checkbox - Inicio --- */ 
+#container-checkbox {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;    
+}
+.col-left #lembrar {
+  display: none;
+}
+.col-left #lembrar + label::before {
+  content: "";
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 0.5rem;
+  background-color: var(--form-background);
+  border: 0.1rem solid var(--text-base);
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.8rem;
+  margin-bottom: 0.3rem;
+  cursor: pointer;
+}
+.col-left #lembrar:checked + label::before {
+  background-color: var(--primary-color);
+  border: 0.1rem solid var(--primary-color);
+  background-image: url(./images/check.svg);
+  background-position: center;
+}
+/* --- Personalização do Checkbox - Fim --- */ 
+.link {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+.link:hover {
+  color: var(--text-title);
+}
+.destaque {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+/* --- Personalização do Botão - Inicio --- */ 
+#btn-entrar {
+  width: 100%;
+  height: 3.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--form-background);
+  background-color: var(--primary-color);
+  border: 0.5rem solid var(--primary-color);
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+#btn-entrar:hover {
+  box-shadow: 0.1rem 0.1rem 0.5rem var(--primary-color);
+}
+/* --- Personalização do Botão - Fim --- */ 
+p.destaque {
+  text-align: center;
+}
+/* --- Imagem de fundo - Inicio --- */ 
+#container-image {
+  height: 100vh;
+  overflow: hidden;
+}
+#side-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* --- Imagem de fundo - Fim --- */ 
+
+@media (max-width: 950px) {
+  body {
+      grid-template-columns: 1fr;
+  }
+
+  #container-form {
+      background-color: var(--background);
+      width: 100%;
+      height: 100%;
+
+  }
+  #container-image {
+      display: none;
+  }
+
+}
+
+@media (max-width: 425px) {
+  body {
+      font-size: 1.4rem;
+  }
+}
